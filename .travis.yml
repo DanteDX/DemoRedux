@@ -9,3 +9,17 @@ before_install:
 
 script:
   - docker run -e CI=true dantedxwolf npm run test
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "reduxdemo"
+  env: "Reduxdemo-env"
+  bucket_name: "elasticbeanstalk-us-east-1-298202957714"
+  bucket_path: "reduxdemo"
+  on:
+    branch: master
+  aws_access_key_id: $AWS_ACCESS_KEY 
+  aws_secret_access_key: $AWS_SECRET_KEY 
+  aws_session_token: $AWS_SESSION_TOKEN
