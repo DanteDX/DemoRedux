@@ -14,12 +14,12 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "reduxdemo"
-  env: "Reduxdemo-env"
+  app: "reduxamin"
+  env: "Reduxamin-env"
   bucket_name: "elasticbeanstalk-us-east-1-298202957714"
-  bucket_path: "reduxdemo"
+  bucket_path: "reduxamin"
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY 
-  secret_access_key: $AWS_SECRET_KEY 
+  access_key_id: "$AWS_ACCESS_KEY" 
+  secret_access_key: "$AWS_SECRET_KEY" 
   # session_token: $AWS_SESSION_TOKEN
