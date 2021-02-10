@@ -11,9 +11,8 @@ script:
   - docker run -e CI=true dantedxwolf npm run test
 
 deploy:
-  provider: netlify
-  site: "piyalhelpingjamil"
-  auth: "21b8aa26-eeba-4b27-b1fd-066e803872c1"
-  edge: true
+  provider: heroku
+  api_key: "$key"
+  app: "$herokuApp"
   on:
     branch: master
