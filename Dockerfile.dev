@@ -1,0 +1,7 @@
+FROM node:alpine
+WORKDIR '/app'
+COPY package.json ./
+RUN npm install --legacy-peer-deps
+RUN npm install -D jest@26.6.0
+COPY ./ ./
+CMD ["npm","run","start"]
